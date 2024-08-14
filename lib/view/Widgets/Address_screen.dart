@@ -143,12 +143,17 @@ class _AddAddressPageState extends State<AddAddressPage> {
     );
   }
 
-  void _handleSubmit() {
-    _saveData();
-    setState(() {});
+  void _handleSubmit() async {
+    await _saveData(); // Save data to SharedPreferences
 
-    Future.delayed(const Duration(seconds: 3), () {
-      setState(() {});
+    // Clear the text fields
+    _addressController.clear();
+    _dateController.clear();
+    _timeController.clear();
+    _descriptionController.clear();
+
+    // Show the submission dialog
+    Future.delayed(const Duration(seconds: 1), () {
       _showSubmissionDialog();
     });
   }

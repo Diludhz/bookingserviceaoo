@@ -9,7 +9,7 @@ class ProfileHeader extends StatelessWidget {
     final double screenWidth = MediaQuery.of(context).size.width;
 
     return Container(
-      height: screenHeight * 0.28, // Adjusted height relative to screen height
+      height: screenHeight * 0.25, // Adjusted height relative to screen height
       width: double.infinity,
 
       decoration: BoxDecoration(

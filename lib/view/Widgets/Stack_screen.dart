@@ -40,7 +40,7 @@ class _StackCardSliderState extends State<StackCardSlider> {
 
     Future.delayed(const Duration(seconds: 1), () {
       overlayEntry.remove(); // Remove the indicator
-      Navigator.push(
+      Navigator.pushReplacement(
         context,
         MaterialPageRoute(builder: (context) => const BookingPage()),
       );

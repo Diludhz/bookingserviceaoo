@@ -110,106 +110,103 @@ class _HomePageState extends State<HomePage> {
       body: Container(
         height: screenHeight,
         decoration: Styles.gradientDecoration,
-        child: SingleChildScrollView(
-          child: Column(
-            children: [
-              const ProfileHeader(),
-              const Padding(
-                padding: EdgeInsets.symmetric(vertical: 10.0),
-                child: SizedBox(
-                  height: 370, // Adjust this height based on your content
-                  child: StackCardSlider(),
-                ),
+        child: Column(
+          children: [
+            const ProfileHeader(),
+            const Padding(
+              padding: EdgeInsets.symmetric(vertical: 10.0),
+              child: SizedBox(
+                height: 370, // Adjust this height based on your content
+                child: StackCardSlider(),
               ),
-              Container(
-                height: screenHeight * 0.15,
-                width: double.infinity,
-                margin: const EdgeInsets.all(10),
-                decoration: BoxDecoration(
-                  color: Colors.white.withOpacity(0.3),
-                  borderRadius: BorderRadius.circular(20),
-                  border: Border.all(color: Colors.white),
-                ),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Expanded(
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          const Padding(
-                            padding: EdgeInsets.all(10),
-                            child: Align(
-                              alignment: Alignment.bottomLeft,
-                              child: Text(
-                                "Become a Patron To start Earnings",
-                                style: TextStyle(
-                                  fontFamily: 'Poppins',
-                                  fontSize: 15,
-                                  fontWeight: FontWeight.w700,
-                                  color: Colors.black,
-                                ),
+            ),
+            Container(
+              height: screenHeight * 0.15,
+              width: double.infinity,
+              margin: const EdgeInsets.all(10),
+              decoration: BoxDecoration(
+                color: Colors.white.withOpacity(0.3),
+                borderRadius: BorderRadius.circular(20),
+                border: Border.all(color: Colors.white),
+              ),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Expanded(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        const Padding(
+                          padding: EdgeInsets.all(10),
+                          child: Align(
+                            alignment: Alignment.bottomLeft,
+                            child: Text(
+                              "Become a Patron To start Earnings",
+                              style: TextStyle(
+                                fontFamily: 'Poppins',
+                                fontSize: 15,
+                                fontWeight: FontWeight.w700,
+                                color: Colors.black,
                               ),
                             ),
                           ),
-                          Padding(
-                            padding: const EdgeInsets.only(
-                                right: 8.0, bottom: 8.0, left: 10),
-                            child: ElevatedButton(
-                              onPressed: () {},
-                              style: ElevatedButton.styleFrom(
-                                foregroundColor: Colors.white,
-                                backgroundColor:
-                                    const Color(0xff00416a).withOpacity(0.5),
-                                padding: const EdgeInsets.symmetric(
-                                  horizontal: 20,
-                                  vertical: 10,
-                                ),
-                                shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(10),
-                                ),
-                              ),
-                              child: const Text(
-                                "Known as",
-                                style: TextStyle(
-                                  fontFamily: 'Poppins',
-                                  fontWeight: FontWeight.w600,
-                                ),
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                    Container(
-                      margin:
-                          const EdgeInsets.only(right: 10, top: 10, bottom: 10),
-                      height: screenHeight * 0.2,
-                      width: screenHeight * 0.13,
-                      decoration: BoxDecoration(
-                        borderRadius:
-                            BorderRadius.circular(screenHeight * 0.02),
-                        shape: BoxShape.rectangle,
-                        boxShadow: const [
-                          BoxShadow(
-                              color: Colors.blue,
-                              spreadRadius: 3,
-                              blurRadius: 10,
-                              blurStyle: BlurStyle.outer,
-                              offset: Offset(3, 2))
-                        ],
-                        image: const DecorationImage(
-                          image: AssetImage("assets/images/known.jpeg"),
-                          fit: BoxFit.cover,
                         ),
+                        Padding(
+                          padding: const EdgeInsets.only(
+                              right: 8.0, bottom: 8.0, left: 10),
+                          child: ElevatedButton(
+                            onPressed: () {},
+                            style: ElevatedButton.styleFrom(
+                              foregroundColor: Colors.white,
+                              backgroundColor:
+                                  const Color(0xff00416a).withOpacity(0.5),
+                              padding: const EdgeInsets.symmetric(
+                                horizontal: 20,
+                                vertical: 10,
+                              ),
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(10),
+                              ),
+                            ),
+                            child: const Text(
+                              "Known as",
+                              style: TextStyle(
+                                fontFamily: 'Poppins',
+                                fontWeight: FontWeight.w600,
+                              ),
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  Container(
+                    margin:
+                        const EdgeInsets.only(right: 10, top: 10, bottom: 10),
+                    height: screenHeight * 0.2,
+                    width: screenHeight * 0.13,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(screenHeight * 0.02),
+                      shape: BoxShape.rectangle,
+                      boxShadow: const [
+                        BoxShadow(
+                            color: Colors.blue,
+                            spreadRadius: 3,
+                            blurRadius: 10,
+                            blurStyle: BlurStyle.outer,
+                            offset: Offset(3, 2))
+                      ],
+                      image: const DecorationImage(
+                        image: AssetImage("assets/images/known.jpeg"),
+                        fit: BoxFit.cover,
                       ),
                     ),
-                  ],
-                ),
+                  ),
+                ],
               ),
-              const SizedBox(height: 10), // Add space at the bottom
-            ],
-          ),
+            ),
+            const SizedBox(height: 10), // Add space at the bottom
+          ],
         ),
       ),
       floatingActionButton: FloatingActionButton(
