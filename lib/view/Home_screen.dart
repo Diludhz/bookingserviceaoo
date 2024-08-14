@@ -105,6 +105,8 @@ class _HomePageState extends State<HomePage> {
     double screenHeight = MediaQuery.of(context).size.height;
 
     return Scaffold(
+      resizeToAvoidBottomInset:
+          false, // Prevent FAB from moving when keyboard is shown
       body: Container(
         height: screenHeight,
         decoration: Styles.gradientDecoration,
